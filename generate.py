@@ -71,7 +71,7 @@ def generate(args):
     else:
         if args.stream:
             print("▶️ Streaming output:")
-        rng = jax.random.PRNGKey(42)  # Fixed seed, could expose as an arg
+        rng = jax.random.PRNGKey(42)  # Fixed seed, could expose as arg
         output = sample(
             model=model,
             params=model.params,
