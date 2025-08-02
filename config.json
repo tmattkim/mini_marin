@@ -1,0 +1,9 @@
+{
+  "vocab_size": 26,
+  "block_size": 8,
+  "n_layer": 2,
+  "n_head": 2,
+  "n_embd": 64,
+  "seed": 42,
+  "num_epochs": 200
+}
