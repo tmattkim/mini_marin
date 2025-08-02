@@ -1,4 +1,4 @@
-# 🧠 GPT-Style Model in Flax
+# 🧠 Mini-Marin – Reproducible Tiny LLM Pipeline
 
 This project implements a lightweight GPT-style language model in JAX/Flax for training, evaluation, and text generation on word-level tokenized data.
 
