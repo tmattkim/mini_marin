@@ -12,7 +12,7 @@ def sample(model, params, config, prompt, max_tokens, temperature=1.0, top_k=Non
         rng = jax.random.PRNGKey(0)  # fixed seed for reproducibility
 
     tokens = [config.vocab.get(w, config.vocab["<unk>"]) for w in prompt.strip().split()]
-    input_ids = jnp.array(tokens)[None, :]  # Shape (1, T)
+    input_ids = jnp.array(tokens)[None, :]
 
     for _ in range(max_tokens):
         logits = model.apply({"params": params}, input_ids)
@@ -71,7 +71,7 @@ def generate(args):
     else:
         if args.stream:
             print("▶️ Streaming output:")
-        rng = jax.random.PRNGKey(42)  # Fixed seed, or you could expose as an arg
+        rng = jax.random.PRNGKey(42)  # Fixed seed, could expose as an arg
         output = sample(
             model=model,
             params=model.params,
